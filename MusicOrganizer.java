@@ -140,17 +140,15 @@ public class MusicOrganizer
     public void listMatching(String searchString)
     {
         //Question.26
-        boolean found = true;
+        boolean found = false;
         for(String filename : files){
-            if(filename.contains(searchString) && found == true){ 
+            if(filename.contains(searchString)){ 
                 //If searchString matches.
                 System.out.println(filename);
-            }
-            else {
-                found = false;
+                found = true;
             }
         }
-        if(found == false){
+        if(!found){
             //If searchString does not match.
             System.out.println("There is no file that matches your search.");
             }
