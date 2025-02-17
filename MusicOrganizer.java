@@ -138,12 +138,21 @@ public class MusicOrganizer
      * List the names of files matching the given search string.
     */
     public void listMatching(String searchString)
-    { //Question.25
+    {
+        //Question.26
+        boolean found = true;
         for(String filename : files){
-            if(filename.contains(searchString)){ 
+            if(filename.contains(searchString) && found == true){ 
                 //If searchString matches.
                 System.out.println(filename);
             }
+            else {
+                found = false;
+            }
         }
+        if(found == false){
+            //If searchString does not match.
+            System.out.println("There is no file that matches your search.");
+            }
     }
 }
