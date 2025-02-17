@@ -133,4 +133,17 @@ public class MusicOrganizer
         }
         return valid;
     }
+    
+    /**
+     * List the names of files matching the given search string.
+    */
+    public void listMatching(String searchString)
+    { //Question.25
+        for(String filename : files){
+            if(filename.contains(searchString)){ 
+                //If searchString matches.
+                System.out.println(filename);
+            }
+        }
+    }
 }
